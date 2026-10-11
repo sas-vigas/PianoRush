@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano Rush</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <h1>PIANO RUSH</h1>
+    <p class="subtitle">HIT THE RIGHT LETTER!</p>
+
+    <div class="stats">
+      <span>Score: <b id="score">0</b></span>
+      <span>Best: <b id="best">0</b></span>
+      <span>Lives: <b id="lives">❤️❤️❤️</b></span>
+    </div>
+
+    <div class="board" id="board">
+      <div class="lane" data-lane="0">
+        <span class="key-label">A</span>
+      </div>
+      <div class="lane" data-lane="1">
+        <span class="key-label">S</span>
+      </div>
+      <div class="lane" data-lane="2">
+        <span class="key-label">D</span>
+      </div>
+      <div class="lane" data-lane="3">
+        <span class="key-label">F</span>
+      </div>
+      <div class="hit-line"></div>
+    </div>
+
+    <div class="controls">
+      <button data-key="A">A</button>
+      <button data-key="S">S</button>
+      <button data-key="D">D</button>
+      <button data-key="F">F</button>
+    </div>
+
+    <button id="start">▶ START GAME</button>
+    <p id="message">Press START to play</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,142 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #101010;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: min(94vw, 430px);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 5px;
+  letter-spacing: 4px;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+#score {
+  color: #5fffc1;
+}
+
+.board {
+  position: relative;
+  height: 510px;
+  overflow: hidden;
+  background: white;
+  border: 4px solid #444;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.lane {
+  position: relative;
+  border-right: 2px solid #222;
+  background: #f8f8f8;
+}
+
+.lane:last-of-type {
+  border-right: none;
+}
+
+.key-label {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #777;
+  pointer-events: none;
+}
+
+.tile {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: 62px;
+  background: #111;
+  color: white;
+  border: 2px solid #555;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  font-weight: bold;
+  box-shadow: 0 4px 0 #555;
+}
+
+.hit-line {
+  position: absolute;
+  z-index: 2;
+  top: 410px;
+  left: 0;
+  width: 100%;
+  border-top: 4px solid #00e6a0;
+  box-shadow: 0 0 12px #00e6a0;
+  pointer-events: none;
+}
+
+.controls {
+  margin-top: 15px;
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  flex: 1;
+  padding: 15px 5px;
+  border: 1px solid #555;
+  border-radius: 7px;
+  background: #242424;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+button:active {
+  background: #00a878;
+  transform: scale(0.97);
+}
+
+#start {
+  margin-top: 14px;
+  width: 100%;
+  background: #00c98b;
+  color: #101010;
+  border: none;
+}
+
+#message {
+  min-height: 24px;
+  margin-top: 12px;
+  color: #aaa;
+  font-size: 14px;
+}
